@@ -4,7 +4,13 @@ if (instance_exists(obPlayer) && instance_exists(obWall)) {
 	if (!surface_exists(surfShadow)){
 		surfShadow = surface_create(10000, 10000);
 	}
-	
+	if (keyboard_check(vk_shift)) {
+		draw_circle(obPlayer.x, obPlayer.y, 60, 1);
+	} else if (keyboard_check(vk_control)) {
+		draw_circle(obPlayer.x, obPlayer.y, 15, 1);
+	} else {
+		draw_circle(obPlayer.x, obPlayer.y, 30, 1);
+	}
 	draw_set_color(c_black);
 	
 	surface_set_target(surfShadow);
@@ -19,6 +25,7 @@ if (instance_exists(obPlayer) && instance_exists(obWall)) {
 	draw_set_blend_mode(bm_subtract);
 	draw_circle(obPlayer.x, obPlayer.y, 1000 * viewScale, 0);
 	draw_set_blend_mode(bm_normal);
+	
 	
 	//Draw Player View Cone
 	draw_set_color(c_black);

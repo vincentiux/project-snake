@@ -66,6 +66,22 @@ if (instance_exists(obPlayer)) {
 			detect = 1;						// Caught!
 			chaseTimer = chaseTimerMax;
 		}
+	} else if (keyboard_check(vk_shift) && distance_to_object(obPlayer) <= 80) {
+		if (detect > 0.8) {
+			detect = 1;						// Caught!
+			chaseTimer = chaseTimerMax;
+		}
+
+	} else if (keyboard_check(vk_control) && distance_to_object(obPlayer) <= 30) {
+		if (detect > 0.8) {
+			detect = 1;						// Caught!
+			chaseTimer = chaseTimerMax;
+		}
+	} else if (distance_to_object(obPlayer) <= 50) {
+		if (detect > 0.8) {
+			detect = 1;						// Caught!
+			chaseTimer = chaseTimerMax;
+		}
 	}
 	else {
 		if (chaseTimer > 0) {
