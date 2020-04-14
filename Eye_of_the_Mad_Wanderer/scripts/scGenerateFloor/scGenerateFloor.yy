@@ -1,0 +1,8 @@
+{
+    "id": "16b32246-894a-4856-8711-ea74bb4a79b8",
+    "modelName": "GMScript",
+    "mvc": "1.0",
+    "name": "scGenerateFloor",
+    "IsCompatibility": false,
+    "IsDnD": false
+}
