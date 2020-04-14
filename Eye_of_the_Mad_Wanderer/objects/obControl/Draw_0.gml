@@ -70,12 +70,15 @@ if (instance_exists(obPlayer) && instance_exists(obWall)) {
 
 // Draw Floor and Hint
 
+
 draw_set_font(fnFloor);
 draw_set_color(c_white);
 
 draw_set_halign(fa_left);
 
 draw_text(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]) + 10, "FLOOR: " + string(global.currentFloor));
+
+instance_create(camera_get_view_x(view_camera[0]) + 10, camera_get_view_y(view_camera[0]) + 10, oTimer);
 
 if (hint) {
 	draw_set_halign(fa_right);
@@ -89,3 +92,4 @@ if (hint) {
 
 	draw_set_halign(fa_left);
 }
+

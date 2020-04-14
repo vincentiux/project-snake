@@ -2,6 +2,8 @@
 /// @param name - a string that matches the name of a room
 /// @returns - an array
 
+
+
 var layout = argument0;
 
 if (layout == "elevator") {

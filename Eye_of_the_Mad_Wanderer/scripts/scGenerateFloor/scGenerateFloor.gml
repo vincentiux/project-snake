@@ -18,6 +18,7 @@ var startY = 5000;
 
 var counter = 0;
 
+
 // Create Rooms
 repeat(roomsNum){
     counter++

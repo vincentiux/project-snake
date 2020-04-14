@@ -74,30 +74,26 @@ if (!dead) {
 	if (d_top && place_free(x, y - collisionSpd)) {
 		if(d_left) {
 			y -= spd/sqrt(2);
-			sprite_index = sp_left;
+			sprite_index = sp_walk_up;
 			image_index += anispd/2;
 		} else if(d_right) {
 			y -= spd/sqrt(2);
-			sprite_index = sp_right;
+			sprite_index = sp_walk_up;
 			image_index += anispd/2;
 		} else {
 			y -= spd;
 			if(dir == 1) {
-				sprite_index = sp_right;
+				sprite_index = sp_walk_up;
 				image_index += anispd;
 			} else {
-				sprite_index = sp_left;
+				sprite_index = sp_walk_up;
 				image_index += anispd;
 			}
 		}
 	}
 
 	if (u_top) {
-		if(dir == 1) {
-			sprite_index = sp_standing_right;
-		} else {
-			sprite_index = sp_standing_left;
-		}
+		sprite_index=sp_walk_up;
 		image_index = 0;
 		speed = 0;
 	}
@@ -105,30 +101,26 @@ if (!dead) {
 	if (d_bottom && place_free(x, y + collisionSpd)) {
 		if(d_left) {
 			y += spd/sqrt(2);
-			sprite_index = sp_left;
+			sprite_index = sp_down;
 			image_index += anispd/2;
 		} else if(d_right) {
 			y += spd/sqrt(2);
-			sprite_index = sp_right;
+			sprite_index = sp_down;
 			image_index += anispd/2;
 		} else {
 			y += spd;
 			if(dir == 1) {
-				sprite_index = sp_right;
+				sprite_index = sp_down;
 				image_index += anispd;
 			} else {
-				sprite_index = sp_left;
+				sprite_index = sp_down;
 				image_index += anispd;
 			}
 		}
 	}
 
 	if (u_bottom) {
-		if(dir == 1) {
-			sprite_index = sp_standing_right;
-		} else {
-			sprite_index = sp_standing_left;
-		}
+		sprite_index=sp_down;
 		image_index = 0;
 		speed = 0;
 	}
